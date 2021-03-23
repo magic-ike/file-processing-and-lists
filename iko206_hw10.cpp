@@ -40,6 +40,7 @@ template <class T>
 class LList {
 public:
     LList(): head(nullptr) {};
+    ~LList();
     void headInsert(T newData);
     void sortDescending();
     LListNode<T>* search(T target);
@@ -48,6 +49,15 @@ private:
     void swap(LListNode<T>* first, LListNode<T>* second);
     LListNode<T>* head;
 };
+
+template <class T>
+LList<T>::~LList<T>() {
+    while (head != nullptr) {
+        LListNode<T>* tempPtr = head;
+        head = head->next;
+        delete tempPtr;
+    }
+}
 
 template <class T>
 void LList<T>::headInsert(T newData) {
