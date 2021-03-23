@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ikeofoegbu/Dropbox/nyu tandon/bridge/coursework/hw/hw10/hw10/iko206_hw10.cpp
+iostream
+-
+fstream
+-
+string
+-
+
